@@ -77,7 +77,7 @@ function init() {
 
   ballArray = [];
   for (var i = 0; i < 30; i++){
-    var radius = randomIntFromRange(10, 100);
+    var radius = randomIntFromRange(10, 200);
     var x = randomIntFromRange(0, canvas.width - radius);
     var y = randomIntFromRange(0, canvas.height - radius);
     var dx = randomIntFromRange(-2, 2);
