@@ -53,8 +53,8 @@ function Ball(x, y, dx, dy, radius, color) {
       this.dy += gravity;
     }
 
-    if(this.x + this.radius + this.dx > canvas.width || this.x - this.radius <= 0) {
-      this.dx = -this.dx
+    if(this.x + this.radius >= canvas.width || this.x - this.radius <= 0) {
+      this.dx = -this.dx * friction;
     }
 
     this.x += this.dx;
@@ -77,8 +77,8 @@ function init() {
 
   ballArray = [];
   for (var i = 0; i < 30; i++){
-    var radius = randomIntFromRange(10, 200);
-    var x = randomIntFromRange(0, canvas.width - radius);
+    var radius = randomIntFromRange(10, 100);
+    var x = randomIntFromRange(radius, canvas.width - radius);
     var y = randomIntFromRange(0, canvas.height - radius);
     var dx = randomIntFromRange(-2, 2);
     var dy = randomIntFromRange(-2, 2);
