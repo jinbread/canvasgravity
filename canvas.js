@@ -22,6 +22,10 @@ addEventListener("click", function(event) {
   init();
 })
 
+addEventListener("touch", function(event) {
+  init();
+})
+
 addEventListener('resize', function(){
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
