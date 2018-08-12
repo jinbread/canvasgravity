@@ -22,7 +22,7 @@ addEventListener("click", function(event) {
   init();
 })
 
-addEventListener("touch", function(event) {
+addEventListener("touchstart", function(event) {
   init();
 })
 
